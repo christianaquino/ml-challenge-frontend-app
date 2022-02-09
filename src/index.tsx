@@ -13,8 +13,8 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/list" element={<ProductList />} />
-        <Route path="/details" element={<ProductDetails />} />
+        <Route path="/items" element={<ProductList />} />
+        <Route path="/items/:id" element={<ProductDetails />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

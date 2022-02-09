@@ -1,0 +1,21 @@
+-  request:
+      url: ^/api/items$
+      method: GET
+      query:
+         q: iphone
+   response:
+    - status: 200
+      latency: 800
+      headers:
+         content-type: application/json
+      file: itemList.json 
+
+-  request:
+      url: ^/api/items/(MLC\d+)$
+      method: GET
+   response:
+    - status: 200
+      latency: 1200
+      headers:
+         content-type: application/json
+      file: itemDetails.json 

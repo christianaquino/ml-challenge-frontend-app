@@ -1,0 +1,19 @@
+{ 
+    "author": {
+        "name": "Christian",
+        "lastname": "Aquino" 
+    },
+    "item": {
+        "id": "MLC18494241" ,
+        "title": "Apple iPhone 13 Pro Max (1 TB) - Grafito ", 
+        "price": {
+            "currency": "CLP", "amount": 1769900, "decimals": 0
+        },
+        "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_940730-MLA48035617182_102021-F.webp", 
+        "condition": "Nuevo", 
+        "free_shipping": true, 
+        "sold_quantity": 50,
+        "description": "Pantalla Super Retina XDR de 6.7 pulgadas con ProMotion que brinda una respuesta más rápida y fluida2 Modo Cine con baja profundidad de campo y cambios de enfoque automáticos en tus video"
+    } 
+}
+       

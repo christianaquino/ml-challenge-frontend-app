@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     jest: true,
   },
-  extends: ['plugin:react/recommended', 'plugin:react/jsx-runtime', 'airbnb', 'prettier'],
+  extends: ['plugin:react/recommended', 'plugin:react/jsx-runtime', 'airbnb'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: ['./tsconfig.json'],
@@ -16,4 +16,9 @@ module.exports = {
     'import/no-unresolved': 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+    },
+  ],
 };
