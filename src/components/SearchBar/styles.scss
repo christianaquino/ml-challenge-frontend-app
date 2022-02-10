@@ -1,0 +1,43 @@
+@use 'sass:map';
+@use '../../global.scss' as *;
+
+.searchbar {
+  @include grid-12-columns;
+  background-color: map.get($colors, 'ml-yellow');
+  grid-area: header;
+  height: 58px;
+
+  &--container {
+    @include grid-12-columns;
+    grid-column-start: 2;
+    grid-column-end: end;
+    align-items: center;
+  }
+
+  &--backbutton {
+    grid-column: 1;
+    text-align: end;
+    padding-right: 18px;
+  }
+
+  &--logo {
+    width: 36px;
+  }
+
+  &--textinput {
+    font-size: 18px;
+    grid-column-start: 2;
+    grid-column-end: span 8;
+    border-width: 0;
+    height: 36px;
+    padding-left: 18px;
+  }
+
+  &--button {
+    padding: 5px;
+    grid-column: 10;
+    width: 36px;
+    height: 38px;
+    border-width: 0;
+  }
+}

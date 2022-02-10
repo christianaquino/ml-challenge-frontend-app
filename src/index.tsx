@@ -2,22 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
-import ProductList from './pages/ProductList';
+import SearchResult from './pages/SearchResult';
 import ProductDetails from './pages/ProductDetails';
 
-import './index.css';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/items" element={<ProductList />} />
-        <Route path="/items/:id" element={<ProductDetails />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>,
+  <div className="layout">
+    <React.StrictMode>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/items" element={<SearchResult />} />
+          <Route path="/items/:id" element={<ProductDetails />} />
+        </Routes>
+      </BrowserRouter>
+    </React.StrictMode>
+  </div>,
   document.getElementById('root'),
 );
 
