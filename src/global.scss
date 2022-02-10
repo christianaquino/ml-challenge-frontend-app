@@ -1,12 +1,29 @@
+@use 'sass:map';
+
 $colors: (
   'ml-yellow': #ffe600,
   'ml-gray-4': #333333,
   'ml-gray-3': #666666,
   'ml-gray-2': #999999,
   'ml-gray-1': #eeeeee,
+  'ml-blue': #3483fa,
 );
 
 @mixin grid-12-columns {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+}
+
+%button-shared {
+  color: white;
+  border-radius: 4px;
+  border: 0;
+  padding: 12px 20px;
+}
+
+.button {
+  &-primary {
+    @extend %button-shared;
+    background-color: map.get($colors, 'ml-blue');
+  }
 }

@@ -1,9 +1,9 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
 function Item({ item }: any) {
   return (
-    <div className="item">
+    <Link to={`/items/${item.id}`} style={{ textDecoration: 'none' }} className="item">
       <div className="item--imagecontainer">
         <img src={item.picture} alt={item.title} className="item--image" />
       </div>
@@ -11,7 +11,7 @@ function Item({ item }: any) {
       <div className="item--title">{item.title}</div>
       <div className="item--condition">{item.condition}</div>
       { item.free_shipping && <div className="item--shipping-free">Envío Gratis</div>}
-    </div>
+    </Link>
   );
 }
 

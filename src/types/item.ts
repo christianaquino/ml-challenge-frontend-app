@@ -7,4 +7,4 @@ interface Iitem {
     free_shipping:boolean
   }
 
-  export default Iitem;
+export default Iitem;

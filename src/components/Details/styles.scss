@@ -1,0 +1,62 @@
+@use 'sass:map';
+@use '../../global.scss' as *;
+
+.details {
+  background-color: white;
+  grid-area: main;
+  padding: 0 32px;
+  display: grid;
+  grid-template-areas:
+    'image condition condition condition condition'
+    'image title title title title'
+    'image price price price price'
+    'image buybutton buybutton ... ...'
+    'image ... ... ... ...'
+    'titledesc titledesc titledesc titledesc titledesc'
+    'description description description ... ...';
+
+  &--imagecontainer {
+    grid-area: image;
+    max-height: 680px;
+  }
+
+  &--image {
+    max-height: 680px;
+  }
+
+  &--condition {
+    grid-area: condition;
+    padding-top: 32px;
+    padding-bottom: 16px;
+    color: map.get($colors, 'ml-gray-3');
+  }
+
+  &--price {
+    grid-area: price;
+    font-size: 46px;
+    padding: 32px 0;
+  }
+
+  &--title {
+    font-size: 24px;
+    grid-area: title;
+  }
+
+  &--buybutton {
+    grid-area: buybutton;
+    padding-right: 32px;
+  }
+
+  &--titledesc {
+    font-size: 28px;
+    grid-area: titledesc;
+    padding-bottom: 32px;
+  }
+
+  &--description {
+    font-size: 16px;
+    grid-area: description;
+    color: map.get($colors, 'ml-gray-3');
+    padding-bottom: 32px;
+  }
+}
