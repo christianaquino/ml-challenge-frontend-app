@@ -5,7 +5,7 @@ interface IBreadcrumbProps {
 }
 
 function Breadcrumb({ categories }: IBreadcrumbProps) {
-  const itemList = categories.map((category) => <li className="breadcrumb--item">{category}</li>);
+  const itemList = categories.map((category) => <li className="breadcrumb--item" key={category}>{category}</li>);
   return (
     <nav className="breadcrumb">
       <ol className="breadcrumb--items">{itemList}</ol>

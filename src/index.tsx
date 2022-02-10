@@ -1,25 +1,10 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import Home from './pages/Home';
-import SearchResult from './pages/SearchResult';
-import ItemDetails from './pages/ItemDetails';
+import App from './App';
 
-import './index.scss';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <div className="layout">
-    <React.StrictMode>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/items" element={<SearchResult />} />
-          <Route path="/items/:id" element={<ItemDetails />} />
-        </Routes>
-      </BrowserRouter>
-    </React.StrictMode>
-  </div>,
+  <App />,
   document.getElementById('root'),
 );
 

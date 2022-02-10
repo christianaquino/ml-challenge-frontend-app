@@ -1,28 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import Home from './pages/Home';
+import SearchResult from './pages/SearchResult';
+import ItemDetails from './pages/ItemDetails';
+import SearchContextProvider from './providers/SearchContextProvider';
+
 import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.tsx</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SearchContextProvider>
+      <div className="layout">
+        <React.StrictMode>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/items" element={<SearchResult />} />
+              <Route path="/items/:id" element={<ItemDetails />} />
+            </Routes>
+          </BrowserRouter>
+        </React.StrictMode>
+      </div>
+    </SearchContextProvider>
   );
 }
 
