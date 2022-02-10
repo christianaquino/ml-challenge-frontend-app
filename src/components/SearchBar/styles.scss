@@ -8,16 +8,10 @@
   height: 58px;
 
   &--container {
-    @include grid-12-columns;
-    grid-column-start: 2;
-    grid-column-end: end;
+    grid-column: 3/11;
+    display: grid;
+    grid-template-columns: 50px 1fr min-content;
     align-items: center;
-  }
-
-  &--backbutton {
-    grid-column: 1;
-    text-align: end;
-    padding-right: 18px;
   }
 
   &--logo {
@@ -26,8 +20,6 @@
 
   &--textinput {
     font-size: 18px;
-    grid-column-start: 2;
-    grid-column-end: span 8;
     border-width: 0;
     height: 36px;
     padding-left: 18px;
@@ -35,7 +27,6 @@
 
   &--button {
     padding: 5px;
-    grid-column: 10;
     width: 36px;
     height: 38px;
     border-width: 0;

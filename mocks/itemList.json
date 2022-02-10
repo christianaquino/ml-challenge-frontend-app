@@ -1,49 +1,57 @@
 {
-    "author": {
-        "name": "Christian",
-        "lastname": "Aquino"
+  "author": {
+    "name": "Christian",
+    "lastname": "Aquino"
+  },
+  "categories": ["Celulares y Telefonía", "Celulares y Smartphones"],
+  "items": [
+    {
+      "id": "MLC15591331",
+      "title": "Apple iPhone SE (2da generación) 64 GB - Negro",
+      "price": {
+        "currency": "CLP",
+        "amount": 316000,
+        "decimals": 0
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_882169-MLA47681043223_092021-F.webp",
+      "condition": "Nuevo",
+      "free_shipping": true
     },
-    "categories": ["Celulares y Telefonía", "Celulares y Smartphones"], 
-    "items": [
-        {
-            "id": "MLC15591331", 
-            "title": "Apple iPhone SE (2da generación) 64 GB - Negro", 
-            "price": {
-                "currency": "CLP", "amount": 316000, "decimals": 0
-            },
-            "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_882169-MLA47681043223_092021-F.webp", 
-            "condition": "Nuevo", 
-            "free_shipping": true
-        },
-        {
-            "id": "MLC16163653", 
-            "title": "Apple iPhone 12 (128 GB) - Negro", 
-            "price": {
-                "currency": "CLP", "amount": 769990, "decimals": 0
-            },
-            "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_876180-MLA46153566939_052021-F.webp", 
-            "condition": "Nuevo", 
-            "free_shipping": true
-        },
-        {
-            "id": "MLC8752432", 
-            "title": "iPhone 8 64 GB gris espacial", 
-            "price": {
-                "currency": "CLP", "amount": 349990, "decimals": 0
-            },
-            "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_754961-MLA44156685606_112020-F.webp", 
-            "condition": "Usado", 
-            "free_shipping": false
-        },
-        {
-            "id": "MLC18494241", 
-            "title": "Apple iPhone 13 Pro Max (1 TB) - Grafito ", 
-            "price": {
-                "currency": "CLP", "amount": 1769900, "decimals": 0
-            },
-            "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_940730-MLA48035617182_102021-F.webp", 
-            "condition": "Nuevo", 
-            "free_shipping": true
-        }
-    ] 
+    {
+      "id": "MLC16163653",
+      "title": "Apple iPhone 12 (128 GB) - Negro",
+      "price": {
+        "currency": "CLP",
+        "amount": 769990,
+        "decimals": 0
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_876180-MLA46153566939_052021-F.webp",
+      "condition": "Nuevo",
+      "free_shipping": true
+    },
+    {
+      "id": "MLC8752432",
+      "title": "iPhone 8 64 GB gris espacial",
+      "price": {
+        "currency": "CLP",
+        "amount": 349990,
+        "decimals": 0
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_839199-MLA44156685607_112020-F.webp",
+      "condition": "Usado",
+      "free_shipping": false
+    },
+    {
+      "id": "MLC18494241",
+      "title": "Apple iPhone 13 Pro Max (1 TB) - Grafito ",
+      "price": {
+        "currency": "CLP",
+        "amount": 1769900,
+        "decimals": 0
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_940730-MLA48035617182_102021-F.webp",
+      "condition": "Nuevo",
+      "free_shipping": true
+    }
+  ]
 }

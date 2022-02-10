@@ -1,0 +1,45 @@
+@use 'sass:map';
+@use '../../global.scss' as *;
+
+.item {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-bottom: 1px solid map.get($colors, 'ml-gray-1');
+  padding: 12px 0;
+  grid-template-areas:
+    'image price ... ... freeshipping '
+    'image title title title ...'
+    'image condition ... ... ...'
+    'image ... ... ... ...';
+
+  &--image {
+    grid-area: image;
+    height: 180px;
+    max-width: 180px;
+    border-radius: 4px;
+    padding-right: 12px;
+  }
+
+  &--price {
+    grid-area: price;
+    font-size: 24px;
+    padding-top: 12px;
+    padding-bottom: 32px;
+  }
+
+  &--title {
+    grid-area: title;
+    font-size: 18px;
+  }
+
+  &--condition {
+    grid-area: condition;
+  }
+
+  &--shipping-free {
+    grid-area: freeshipping;
+    font-size: 12px;
+    padding-top: 12px;
+    color: map.get($colors, 'ml-gray-3');
+  }
+}
