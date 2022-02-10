@@ -14,5 +14,6 @@ body {
   @include grid-12-columns;
   grid-template-areas:
     'header header header header header header header header header header header header'
+    '... ... breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb ... ...'
     '... ... main main main main main main main main ... ...';
 }

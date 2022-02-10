@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import qs from 'qs';
 import SearchBar from '../components/SearchBar';
 import ItemList from '../components/ItemList';
+import Breadcrum from '../components/Breadcrumb';
 import { searchItems } from '../services/itemsService';
 
 function SearchResult() {
@@ -17,10 +18,9 @@ function SearchResult() {
     );
   }, [query]);
 
-  console.log(items, categories);
-
   return (
     <>
+      <Breadcrum categories={categories} />
       <SearchBar searchText={query} />
       <ItemList items={items} />
     </>

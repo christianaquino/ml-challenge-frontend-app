@@ -1,0 +1,30 @@
+@use 'sass:map';
+@use '../../global.scss' as *;
+
+.breadcrumb {
+  grid-area: breadcrumb;
+  align-items: initial;
+  color: map.get($colors, 'ml-gray-3');
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  li + li:before {
+    font-weight: normal;
+    padding: 8px;
+    content: '>';
+  }
+
+  li:last-child {
+    font-weight: bold;
+  }
+
+  &--items {
+    padding-inline-start: 0;
+    margin-block: 0;
+  }
+
+  &--item {
+    text-decoration: none;
+    display: inline;
+  }
+}
