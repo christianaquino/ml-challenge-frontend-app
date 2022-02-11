@@ -1,4 +1,4 @@
-import React from 'react';
+import { StrictMode } from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import SearchResult from './pages/SearchResult';
@@ -11,7 +11,7 @@ function App() {
   return (
     <SearchContextProvider>
       <div className="layout">
-        <React.StrictMode>
+        <StrictMode>
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -19,7 +19,7 @@ function App() {
               <Route path="/items/:id" element={<ItemDetails />} />
             </Routes>
           </BrowserRouter>
-        </React.StrictMode>
+        </StrictMode>
       </div>
     </SearchContextProvider>
   );

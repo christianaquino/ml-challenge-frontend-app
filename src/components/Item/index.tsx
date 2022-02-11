@@ -3,7 +3,7 @@ import './styles.scss';
 
 function Item({ item }: any) {
   return (
-    <Link to={`/items/${item.id}`} style={{ textDecoration: 'none' }} className="item">
+    <Link to={`/items/${item.id}`} className="item">
       <div className="item--imagecontainer">
         <img src={item.picture} alt={item.title} className="item--image" />
       </div>

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar component renders correctly 1`] = `
+<DocumentFragment>
+  <header
+    class="searchbar"
+  >
+    <div
+      class="searchbar--container"
+    >
+      <a
+        aria-label="volver al inicio"
+        class="searchbar--backbutton"
+        to="/"
+      >
+        <img
+          alt="logo"
+          class="searchbar--logo"
+          src="/assets/Logo_ML.png"
+        />
+      </a>
+      <input
+        class="searchbar--textinput"
+        placeholder="Nunca dejes de buscar"
+        type="text"
+        value=""
+      />
+      <button
+        aria-label="buscar"
+        class="searchbar--button"
+        type="button"
+      >
+        <img
+          alt="icono buscar"
+          src="/assets/ic_Search.png"
+        />
+      </button>
+    </div>
+  </header>
+</DocumentFragment>
+`;
