@@ -1,5 +1,13 @@
-const searchItems = (searchText: string) => fetch(`https://localhost:7443/api/items?q=${searchText}`).then((res) => res.json());
+const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
 
-const getDetails = (id: string) => fetch(`https://localhost:7443/api/items/${id}`).then((res) => res.json());
+const searchItems = async (searchText: string) => {
+  const response = await fetch(`${apiBaseUrl}/api/items?q=${searchText}`);
+  return response.json();
+};
+
+const getDetails = async (id: string) => {
+  const response = await fetch(`${apiBaseUrl}/api/items/${id}`);
+  return response.json();
+};
 
 export { searchItems, getDetails };

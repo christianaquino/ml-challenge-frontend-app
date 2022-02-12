@@ -9,12 +9,15 @@ import { SearchContext } from '../providers/SearchContextProvider';
 function ItemDetails() {
   const params = useParams();
   const { searchData } = useContext(SearchContext) as any;
-  const [itemDetails, setitemDetails] = useState();
+  const [itemDetails, setItemDetails] = useState();
 
   useEffect(() => {
-    getDetails(params.id as string).then(
-      ({ item }) => setitemDetails(item),
-    );
+    const fetchData = async () => {
+      const { item } = await getDetails(params.id as string);
+      setItemDetails(item);
+    };
+
+    fetchData();
   }, []);
 
   return (

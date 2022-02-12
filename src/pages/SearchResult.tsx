@@ -15,13 +15,14 @@ function SearchResult() {
   const query: string = qs.parse(search, { ignoreQueryPrefix: true }).search as string;
 
   useEffect(() => {
-    searchItems(query).then(
-      (res) => {
-        setCategories(res.categories);
-        setItems(res.items);
-        setSearchData({ query, categories: res.categories });
-      },
-    );
+    const fetchData = async () => {
+      const data = await searchItems(query) as any;
+      setCategories(data.categories);
+      setItems(data.items);
+      setSearchData({ query, categories: data.categories });
+    };
+
+    fetchData();
   }, [query]);
 
   return (

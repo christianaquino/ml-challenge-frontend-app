@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Run local environment:
+
+Rename `.env.example` to `.env`.
+Run `npm stubby` to start mock server.
+Run `npm start` to start the application.
+
+In the search input field, type `iphone` to get results.
+
 ## Available Scripts
 
 In the project directory, you can run:
