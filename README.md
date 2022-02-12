@@ -4,9 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Run local environment:
 
-Rename `.env.example` to `.env`.
-Run `npm stubby` to start mock server.
-Run `npm start` to start the application.
+- Rename `.env.example` to `.env`.
+- Run `npm stubby` to start mock server.
+- Run `npm start` to start the application.
 
 In the search input field, type `iphone` to get results.
 
