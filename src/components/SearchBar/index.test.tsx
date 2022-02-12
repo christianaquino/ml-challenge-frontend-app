@@ -1,29 +1,44 @@
 import { render, fireEvent } from '@testing-library/react';
-import SearchBar from './index';
+import { ClassAttributes, AnchorHTMLAttributes } from 'react';
+import SearchBar from '.';
 
 const mockedUsedNavigate = jest.fn();
 
 jest.mock('react-router-dom', () => ({
-   ...jest.requireActual('react-router-dom') as any,
+  ...jest.requireActual('react-router-dom') as any,
   useNavigate: () => mockedUsedNavigate,
-  Link: props => <a { ...props}>{props.children}</a>
+  Link: (
+    // eslint-disable-next-line no-undef
+    props: JSX.IntrinsicAttributes
+    & ClassAttributes<HTMLAnchorElement>
+    & AnchorHTMLAttributes<HTMLAnchorElement>,
+  ) => (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <a {...props}>
+      { // eslint-disable-next-line react/destructuring-assignment
+        props.children
+      }
+    </a>
+  ),
 }));
 
 describe('SearchBar component', () => {
   test('renders correctly', () => {
-    const { container, asFragment } = render(<SearchBar />);
+    const { asFragment } = render(<SearchBar />);
 
-    expect(asFragment()).toMatchSnapshot()
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test('navigates to search results', () => {
     const { container } = render(<SearchBar />);
-    const searchInput = container.querySelector('.searchbar--textinput');
-    const searchButton = container.querySelector('.searchbar--button');
+    const searchInput: Element | null = container.querySelector('.searchbar--textinput');
+    const searchButton: Element | null = container.querySelector('.searchbar--button');
 
-    fireEvent.change(searchInput, { target: {value: 'iphone'}} )
-    fireEvent.click(searchButton)
+    if (searchInput && searchButton) {
+      fireEvent.change(searchInput, { target: { value: 'iphone' } });
+      fireEvent.click(searchButton);
+    }
 
-    expect(mockedUsedNavigate).toHaveBeenCalledWith('/items?search=iphone')
+    expect(mockedUsedNavigate).toHaveBeenCalledWith('/items?search=iphone');
   });
 });

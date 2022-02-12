@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Details component Renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="details"
+  >
+    <div
+      class="details--imagecontainer"
+    >
+      <img
+        alt="IPhone 12 Pro"
+        class="details--image"
+        src="//iphone.jpg"
+      />
+    </div>
+    <div
+      class="details--condition"
+    >
+      Nuevo - 20 vendidos
+    </div>
+    <div
+      class="details--title"
+    >
+      IPhone 12 Pro
+    </div>
+    <div
+      class="details--price"
+    >
+      CLP 1560000
+    </div>
+    <button
+      class="button-primary details--buybutton"
+      type="button"
+    >
+      Comprar
+    </button>
+    <div
+      class="details--titledesc"
+    >
+      Descripción del producto
+    </div>
+    <div
+      class="details--description"
+    >
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrysstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book
+    </div>
+  </div>
+</DocumentFragment>
+`;

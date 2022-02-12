@@ -3,13 +3,12 @@ import { useParams } from 'react-router-dom';
 import { getDetails } from '../services/itemsService';
 import SearchBar from '../components/SearchBar';
 import Details from '../components/Details';
-import { SearchContext } from '../providers/SearchContextProvider';
 import Breadcrumb from '../components/Breadcrumb';
+import { SearchContext } from '../providers/SearchContextProvider';
 
 function ItemDetails() {
   const params = useParams();
   const { searchData } = useContext(SearchContext) as any;
-
   const [itemDetails, setitemDetails] = useState();
 
   useEffect(() => {
@@ -22,7 +21,7 @@ function ItemDetails() {
     <>
       <SearchBar searchText={searchData.query} />
       <Breadcrumb categories={searchData.categories || []} />
-      {itemDetails && <Details item={itemDetails} />}
+      { itemDetails && <Details itemDetails={itemDetails} /> }
     </>
   );
 }

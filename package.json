@@ -24,13 +24,15 @@
     "stubby": "stubby -d mocks/config.yml",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint -c .eslintrc.js --ext .ts,.tsx ./src",
     "lint:fix": "eslint --cache -c .eslintrc.js --ext .ts,.tsx ./src --fix"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test:coverage"
     }
   },
   "eslintConfig": {

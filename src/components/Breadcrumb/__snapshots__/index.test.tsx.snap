@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BreadCrumb component renders correctly 1`] = `
+<DocumentFragment>
+  <nav
+    class="breadcrumb"
+  >
+    <ol
+      class="breadcrumb--items"
+    >
+      <li
+        class="breadcrumb--item"
+      >
+        cat1
+      </li>
+      <li
+        class="breadcrumb--item"
+      >
+        cat2
+      </li>
+      <li
+        class="breadcrumb--item"
+      >
+        cat3
+      </li>
+    </ol>
+  </nav>
+</DocumentFragment>
+`;

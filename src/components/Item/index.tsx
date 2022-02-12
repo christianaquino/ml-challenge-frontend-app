@@ -1,7 +1,12 @@
 import { Link } from 'react-router-dom';
+import { IItem } from '../../types/item';
 import './styles.scss';
 
-function Item({ item }: any) {
+interface IItemProps {
+  item: IItem
+}
+
+function Item({ item }: IItemProps) {
   return (
     <Link to={`/items/${item.id}`} className="item">
       <div className="item--imagecontainer">

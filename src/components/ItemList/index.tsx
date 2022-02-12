@@ -1,14 +1,16 @@
 import Item from '../Item';
+import { IItem } from '../../types/item';
+
 import './styles.scss';
 
 interface IItemListProps {
-    items: any[]
+    items: IItem[]
 }
 
 function ItemList({ items }: IItemListProps) {
   return (
     <div className="itemlist">
-      {items.map((item: any) => <Item item={item} key={item.id} />)}
+      {items.map((item: IItem) => <Item item={item} key={item.id} />)}
     </div>
   );
 }

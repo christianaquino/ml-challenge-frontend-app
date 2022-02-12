@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item component renders correctly itme with free shipping 1`] = `
+<DocumentFragment>
+  <a
+    class="item"
+    to="/items/MLC8752432"
+  >
+    <div
+      class="item--imagecontainer"
+    >
+      <img
+        alt="IPhone 12"
+        class="item--image"
+        src="//item.jpg"
+      />
+    </div>
+    <div
+      class="item--price"
+    >
+      CLP 650000
+    </div>
+    <div
+      class="item--title"
+    >
+      IPhone 12
+    </div>
+    <div
+      class="item--condition"
+    >
+      Nuevo
+    </div>
+    <div
+      class="item--shipping-free"
+    >
+      Envío Gratis
+    </div>
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Item component renders correctly itme with no free shipping 1`] = `
+<DocumentFragment>
+  <a
+    class="item"
+    to="/items/MLC8752432"
+  >
+    <div
+      class="item--imagecontainer"
+    >
+      <img
+        alt="IPhone 12"
+        class="item--image"
+        src="//item.jpg"
+      />
+    </div>
+    <div
+      class="item--price"
+    >
+      CLP 650000
+    </div>
+    <div
+      class="item--title"
+    >
+      IPhone 12
+    </div>
+    <div
+      class="item--condition"
+    >
+      Nuevo
+    </div>
+  </a>
+</DocumentFragment>
+`;
