@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# ML challenge frontend app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -26,6 +26,18 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run test:coverage`
+
+Similar to `npm test` but adding coverage report.
+
+### `npm run lint`
+
+Runs linter tool. Visit [ESLint](https://eslint.org/) home page for more information.
+
+### `npm run lint:fix`
+
+Similar to  `npm run lint` but adding the `--fix` parameter.
 
 ### `npm run build`
 
